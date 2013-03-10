@@ -1,0 +1,3530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Tripod_Lamp_GUIClass</class>
+ <widget class="QMainWindow" name="Tripod_Lamp_GUIClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>600</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Tripod Lamp Control</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="tripod_lamp_gui.qrc">
+    <normaloff>:/Tripod_Lamp_GUI/Icons/colorwheel_Icon.png</normaloff>:/Tripod_Lamp_GUI/Icons/colorwheel_Icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="pushButtonConnect">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>10</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Connect</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>356</y>
+      <width>401</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="labelPort">
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="text">
+        <string>Com-Port: </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelBaud">
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="text">
+        <string>Baudrate: </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Board:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelConnectionStatusText">
+       <property name="styleSheet">
+        <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Disconnected</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelConnectionStatusIcon">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>581</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="setColor">
+     <attribute name="title">
+      <string>Set Color</string>
+     </attribute>
+     <widget class="QSlider" name="verticalSliderBlue">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>40</y>
+        <width>19</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="verticalSliderGreen">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>40</y>
+        <width>19</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="verticalSliderRed">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>19</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="invertedControls">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelRedValue">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>20</y>
+        <width>41</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0%</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGreenValue">
+      <property name="geometry">
+       <rect>
+        <x>39</x>
+        <y>20</y>
+        <width>41</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0%</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelBlueValue">
+      <property name="geometry">
+       <rect>
+        <x>79</x>
+        <y>20</y>
+        <width>41</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0%</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>39</x>
+        <y>190</y>
+        <width>41</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Green</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>79</x>
+        <y>190</y>
+        <width>41</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Blue</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>190</y>
+        <width>41</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Red</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelColorWheel">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>30</y>
+        <width>200</width>
+        <height>200</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="tripod_lamp_gui.qrc">:/Tripod_Lamp_GUI/Icons/colorwheel_200.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxSide">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>60</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Both</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Top</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bottom</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>40</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select side:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelColorWheelPaint">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>30</y>
+        <width>200</width>
+        <height>200</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QSlider" name="verticalSliderWhite">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>39</y>
+        <width>20</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>149</x>
+        <y>190</y>
+        <width>41</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>White</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelWhiteValue">
+      <property name="geometry">
+       <rect>
+        <x>149</x>
+        <y>20</y>
+        <width>41</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0%</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonResetSettings">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>190</y>
+        <width>101</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Reset settings</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>19</x>
+        <y>219</y>
+        <width>80</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_2">
+      <property name="geometry">
+       <rect>
+        <x>19</x>
+        <y>209</y>
+        <width>1</width>
+        <height>10</height>
+       </rect>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_3">
+      <property name="geometry">
+       <rect>
+        <x>59</x>
+        <y>209</y>
+        <width>1</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_4">
+      <property name="geometry">
+       <rect>
+        <x>98</x>
+        <y>209</y>
+        <width>1</width>
+        <height>10</height>
+       </rect>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBoxLinkSliders">
+      <property name="geometry">
+       <rect>
+        <x>53</x>
+        <y>230</y>
+        <width>70</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Link</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="setLed">
+     <attribute name="title">
+      <string>Set LED</string>
+     </attribute>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>41</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Branch*:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxBranch">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>50</y>
+        <width>69</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>31</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Side:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxLEDSide">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>90</y>
+        <width>69</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Top</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bottom</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>130</y>
+        <width>31</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Color:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxColor">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>130</y>
+        <width>69</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Red</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Green</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Blue</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>White</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>270</y>
+        <width>131</width>
+        <height>14</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: italic 6pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;* (Not relevant for white)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="verticalSliderColor">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>30</y>
+        <width>20</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelColorValue">
+      <property name="geometry">
+       <rect>
+        <x>157</x>
+        <y>12</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;0%&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>20</y>
+        <width>240</width>
+        <height>66</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: italic 8pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="title">
+       <string>Branch 1</string>
+      </property>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>15</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Red:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Green:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_15">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>45</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Blue:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_18">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>15</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Red:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_16">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>30</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Green:</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::PlainText</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_17">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>45</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Blue:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelB1RedTop">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>15</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelB1GreenTop">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>30</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelB1BlueTop">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>45</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelB1BlueBottom">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>45</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelB1GreenBottom">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>30</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelB1RedBottom">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>15</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>90</y>
+        <width>240</width>
+        <height>66</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: italic 8pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="title">
+       <string>Branch 2</string>
+      </property>
+      <widget class="QLabel" name="label_21">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>15</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Red:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_22">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Green:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_23">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>45</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Blue:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_24">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>15</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Red:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_25">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>30</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Green:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_26">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>45</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Blue:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelB2RedTop">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>15</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelB2GreenTop">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>30</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelB2BlueTop">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>45</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelB2BlueBottom">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>45</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelB2GreenBottom">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>30</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelB2RedBottom">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>15</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>160</y>
+        <width>240</width>
+        <height>66</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: italic 8pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="title">
+       <string>Branch 3</string>
+      </property>
+      <widget class="QLabel" name="label_29">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>15</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Red:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_30">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Green:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_31">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>45</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Blue:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_32">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>15</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Red:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_33">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>30</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Green:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_34">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>45</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Blue:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelB3RedTop">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>15</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelB3GreenTop">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>30</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelB3BlueTop">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>45</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelB3BlueBottom">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>45</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelB3GreenBottom">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>30</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelB3RedBottom">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>15</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>4</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Bottom</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>230</y>
+        <width>240</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: italic 8pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="title">
+       <string>White</string>
+      </property>
+      <widget class="QLabel" name="label_35">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>20</y>
+         <width>51</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Bottom:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelWhiteTop">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>20</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelWhiteBottom">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>20</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_36">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>41</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Top:</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>4</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Top</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonIncreaseLED">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>30</y>
+        <width>81</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Increase</string>
+      </property>
+      <property name="icon">
+       <iconset resource="tripod_lamp_gui.qrc">
+        <normaloff>:/Tripod_Lamp_GUI/Icons/arrow_up.png</normaloff>:/Tripod_Lamp_GUI/Icons/arrow_up.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonDecreaseLED">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>230</y>
+        <width>81</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Decrease</string>
+      </property>
+      <property name="icon">
+       <iconset resource="tripod_lamp_gui.qrc">
+        <normaloff>:/Tripod_Lamp_GUI/Icons/arrow_down.png</normaloff>:/Tripod_Lamp_GUI/Icons/arrow_down.png</iconset>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Sequence">
+     <attribute name="title">
+      <string>Sequence</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBoxStep">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>411</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Step options</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <widget class="QStackedWidget" name="stackedWidgetTop">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>200</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="TopNoChange">
+        <widget class="QLabel" name="label_37">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>90</y>
+           <width>81</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>No Change</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="TopRandom">
+        <widget class="QGroupBox" name="groupBox_5">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>191</width>
+           <height>171</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Random options</string>
+         </property>
+         <widget class="QComboBox" name="comboBoxRandom1Colors">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>171</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>Only full colors</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>All colors</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QCheckBox" name="checkBoxRandom1Red">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>50</y>
+            <width>21</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBoxRandom1Blue">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>70</y>
+            <width>21</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_40">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>50</y>
+            <width>31</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 0, 0)</string>
+          </property>
+          <property name="text">
+           <string>Red:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_41">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>70</y>
+            <width>31</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 255)</string>
+          </property>
+          <property name="text">
+           <string>Blue:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_43">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>70</y>
+            <width>41</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>White:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_42">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>50</y>
+            <width>41</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 187, 0)</string>
+          </property>
+          <property name="text">
+           <string>Green:</string>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBoxRandom1Green">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>50</y>
+            <width>21</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBoxRandom1White">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>70</y>
+            <width>21</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBoxRandom1Same">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>140</y>
+            <width>21</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_48">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>140</y>
+            <width>131</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Same light for all branches:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_69">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>110</y>
+            <width>81</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Dimming factor:</string>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxRandom1Dim">
+          <property name="geometry">
+           <rect>
+            <x>103</x>
+            <y>110</y>
+            <width>61</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::UpDownArrows</enum>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>100</number>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="TopManual">
+        <widget class="QGroupBox" name="groupBox_6">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>191</width>
+           <height>171</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Manual options</string>
+         </property>
+         <widget class="QLabel" name="label_39">
+          <property name="geometry">
+           <rect>
+            <x>17</x>
+            <y>20</y>
+            <width>46</width>
+            <height>13</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;; color: red; </string>
+          </property>
+          <property name="text">
+           <string>Red</string>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxTopBlue1">
+          <property name="geometry">
+           <rect>
+            <x>136</x>
+            <y>40</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxTopBlue3">
+          <property name="geometry">
+           <rect>
+            <x>136</x>
+            <y>100</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxTopRed1">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>40</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxTopBlue2">
+          <property name="geometry">
+           <rect>
+            <x>136</x>
+            <y>70</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxTopRed2">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>70</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxTopRed3">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>100</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxTopGreen3">
+          <property name="geometry">
+           <rect>
+            <x>76</x>
+            <y>100</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxTopGreen1">
+          <property name="geometry">
+           <rect>
+            <x>76</x>
+            <y>40</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxTopGreen2">
+          <property name="geometry">
+           <rect>
+            <x>76</x>
+            <y>70</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_55">
+          <property name="geometry">
+           <rect>
+            <x>77</x>
+            <y>20</y>
+            <width>46</width>
+            <height>13</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;; color: green; </string>
+          </property>
+          <property name="text">
+           <string>Green</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_56">
+          <property name="geometry">
+           <rect>
+            <x>137</x>
+            <y>20</y>
+            <width>46</width>
+            <height>13</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;; color: blue; </string>
+          </property>
+          <property name="text">
+           <string>Blue</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_57">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>40</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;;</string>
+          </property>
+          <property name="text">
+           <string>1</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_58">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>70</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;;</string>
+          </property>
+          <property name="text">
+           <string>2</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_59">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>100</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;;</string>
+          </property>
+          <property name="text">
+           <string>3</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxTopWhite">
+          <property name="geometry">
+           <rect>
+            <x>77</x>
+            <y>140</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_60">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>140</y>
+            <width>46</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;;</string>
+          </property>
+          <property name="text">
+           <string>White:</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="TopSame">
+        <widget class="QLabel" name="label_53">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>90</y>
+           <width>81</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Same as Bottom</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_20">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>71</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Top light:</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBoxTopSel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>101</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <property name="minimumContentsLength">
+        <number>0</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>No change</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Random</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Manual</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Same as Bottom</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QTimeEdit" name="timeEditToNextStep">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>10</y>
+         <width>81</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="wrapping">
+        <bool>false</bool>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+       <property name="buttonSymbols">
+        <enum>QAbstractSpinBox::PlusMinus</enum>
+       </property>
+       <property name="correctionMode">
+        <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+       </property>
+       <property name="minimumTime">
+        <time>
+         <hour>0</hour>
+         <minute>0</minute>
+         <second>0</second>
+        </time>
+       </property>
+       <property name="currentSection">
+        <enum>QDateTimeEdit::MinuteSection</enum>
+       </property>
+       <property name="displayFormat">
+        <string>mm:ss.zzz</string>
+       </property>
+       <property name="calendarPopup">
+        <bool>false</bool>
+       </property>
+       <property name="timeSpec">
+        <enum>Qt::LocalTime</enum>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBoxFadeLight">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>31</y>
+         <width>21</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="tristate">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonSaveStep">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>240</y>
+         <width>101</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Save step   </string>
+       </property>
+       <property name="icon">
+        <iconset resource="tripod_lamp_gui.qrc">
+         <normaloff>:/Tripod_Lamp_GUI/Icons/accept.png</normaloff>:/Tripod_Lamp_GUI/Icons/accept.png</iconset>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonStepDown">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>240</y>
+         <width>31</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Move step downwards</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="tripod_lamp_gui.qrc">
+         <normaloff>:/Tripod_Lamp_GUI/Icons/arrow_down.png</normaloff>:/Tripod_Lamp_GUI/Icons/arrow_down.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonStepUp">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>226</x>
+         <y>240</y>
+         <width>31</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Move step upwards</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="tripod_lamp_gui.qrc">
+         <normaloff>:/Tripod_Lamp_GUI/Icons/arrow_up.png</normaloff>:/Tripod_Lamp_GUI/Icons/arrow_up.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonStepRemove">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>192</x>
+         <y>240</y>
+         <width>31</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Remove selected step</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="tripod_lamp_gui.qrc">
+         <normaloff>:/Tripod_Lamp_GUI/Icons/cross.png</normaloff>:/Tripod_Lamp_GUI/Icons/cross.png</iconset>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_50">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>240</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Name:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEditStepName">
+       <property name="geometry">
+        <rect>
+         <x>43</x>
+         <y>240</y>
+         <width>131</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="maxLength">
+        <number>50</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_51">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>10</y>
+         <width>101</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Bottom light:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBoxBotSel">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>30</y>
+         <width>101</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <property name="minimumContentsLength">
+        <number>0</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>No change</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Random</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Manual</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Same as Top</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QStackedWidget" name="stackedWidgetBot">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>50</y>
+         <width>200</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="BotNoChange">
+        <widget class="QLabel" name="label_38">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>90</y>
+           <width>81</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>No Change</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="BotRandom">
+        <widget class="QGroupBox" name="groupBox_7">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>191</width>
+           <height>171</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Random options</string>
+         </property>
+         <widget class="QLabel" name="label_47">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>70</y>
+            <width>31</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 255)</string>
+          </property>
+          <property name="text">
+           <string>Blue:</string>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBoxRandom2Green">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>50</y>
+            <width>21</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBoxRandom2Blue">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>70</y>
+            <width>21</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBoxRandom2White">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>70</y>
+            <width>21</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_44">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>50</y>
+            <width>31</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 0, 0)</string>
+          </property>
+          <property name="text">
+           <string>Red:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_46">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>50</y>
+            <width>41</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 187, 0)</string>
+          </property>
+          <property name="text">
+           <string>Green:</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="comboBoxRandom2Colors">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>171</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>Only full colors</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>All colors</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QCheckBox" name="checkBoxRandom2Red">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>50</y>
+            <width>21</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_45">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>70</y>
+            <width>41</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>White:</string>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBoxRandom2Same">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>140</y>
+            <width>21</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_49">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>140</y>
+            <width>131</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Same light for all branches:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_70">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>110</y>
+            <width>81</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Dimming factor:</string>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxRandom2Dim">
+          <property name="geometry">
+           <rect>
+            <x>103</x>
+            <y>110</y>
+            <width>61</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::UpDownArrows</enum>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>100</number>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="BotManual">
+        <widget class="QGroupBox" name="groupBox_8">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>191</width>
+           <height>171</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Manual options</string>
+         </property>
+         <widget class="QLabel" name="label_52">
+          <property name="geometry">
+           <rect>
+            <x>17</x>
+            <y>20</y>
+            <width>46</width>
+            <height>13</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;; color: red; </string>
+          </property>
+          <property name="text">
+           <string>Red</string>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxBotBlue1">
+          <property name="geometry">
+           <rect>
+            <x>136</x>
+            <y>40</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxBotBlue3">
+          <property name="geometry">
+           <rect>
+            <x>136</x>
+            <y>100</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxBotRed1">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>40</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxBotBlue2">
+          <property name="geometry">
+           <rect>
+            <x>136</x>
+            <y>70</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxBotRed2">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>70</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxBotRed3">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>100</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxBotGreen3">
+          <property name="geometry">
+           <rect>
+            <x>76</x>
+            <y>100</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxBotGreen1">
+          <property name="geometry">
+           <rect>
+            <x>76</x>
+            <y>40</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxBotGreen2">
+          <property name="geometry">
+           <rect>
+            <x>76</x>
+            <y>70</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_61">
+          <property name="geometry">
+           <rect>
+            <x>77</x>
+            <y>20</y>
+            <width>46</width>
+            <height>13</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;; color: green; </string>
+          </property>
+          <property name="text">
+           <string>Green</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_62">
+          <property name="geometry">
+           <rect>
+            <x>137</x>
+            <y>20</y>
+            <width>46</width>
+            <height>13</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;; color: blue; </string>
+          </property>
+          <property name="text">
+           <string>Blue</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_63">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>40</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;;</string>
+          </property>
+          <property name="text">
+           <string>1</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_64">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>70</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;;</string>
+          </property>
+          <property name="text">
+           <string>2</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_65">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>100</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;;</string>
+          </property>
+          <property name="text">
+           <string>3</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBoxBotWhite">
+          <property name="geometry">
+           <rect>
+            <x>77</x>
+            <y>140</y>
+            <width>51</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_66">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>140</y>
+            <width>46</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;;</string>
+          </property>
+          <property name="text">
+           <string>White:</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="BotSame">
+        <widget class="QLabel" name="label_54">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>90</y>
+           <width>81</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Same as Top</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_27">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>10</y>
+         <width>91</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Time to next step:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_28">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>30</y>
+         <width>61</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Fade light:</string>
+       </property>
+      </widget>
+      <zorder>stackedWidgetBot</zorder>
+      <zorder>stackedWidgetTop</zorder>
+      <zorder>label_20</zorder>
+      <zorder>comboBoxTopSel</zorder>
+      <zorder>timeEditToNextStep</zorder>
+      <zorder>checkBoxFadeLight</zorder>
+      <zorder>pushButtonSaveStep</zorder>
+      <zorder>pushButtonStepDown</zorder>
+      <zorder>pushButtonStepUp</zorder>
+      <zorder>pushButtonStepRemove</zorder>
+      <zorder>label_50</zorder>
+      <zorder>lineEditStepName</zorder>
+      <zorder>label_51</zorder>
+      <zorder>label_27</zorder>
+      <zorder>label_28</zorder>
+      <zorder>comboBoxBotSel</zorder>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>0</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Steps:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonAddStep">
+      <property name="geometry">
+       <rect>
+        <x>429</x>
+        <y>259</y>
+        <width>143</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add new step    </string>
+      </property>
+      <property name="icon">
+       <iconset resource="tripod_lamp_gui.qrc">
+        <normaloff>:/Tripod_Lamp_GUI/Icons/add.png</normaloff>:/Tripod_Lamp_GUI/Icons/add.png</iconset>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>17</y>
+        <width>141</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="vLayoutSeqTable">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Presets</string>
+     </attribute>
+     <widget class="QLabel" name="label_71">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Select preset to load:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_72">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>71</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Preset name:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditPresetName">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>70</y>
+        <width>485</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonPresetSave">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>271</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save preset</string>
+      </property>
+      <property name="icon">
+       <iconset resource="tripod_lamp_gui.qrc">
+        <normaloff>:/Tripod_Lamp_GUI/Icons/accept.png</normaloff>:/Tripod_Lamp_GUI/Icons/accept.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonPresetDiscard">
+      <property name="geometry">
+       <rect>
+        <x>294</x>
+        <y>110</y>
+        <width>271</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Discard preset</string>
+      </property>
+      <property name="icon">
+       <iconset resource="tripod_lamp_gui.qrc">
+        <normaloff>:/Tripod_Lamp_GUI/Icons/bin.png</normaloff>:/Tripod_Lamp_GUI/Icons/bin.png</iconset>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBoxPresetAskOverwrite">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>140</y>
+        <width>211</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Overwrite without asking</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>28</y>
+        <width>561</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="vLayoutPreset">
+       <property name="rightMargin">
+        <number>6</number>
+       </property>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButtonSwitchFade">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>10</y>
+      <width>101</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Switch Fades on</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonAllLedsOff">
+    <property name="geometry">
+     <rect>
+      <x>489</x>
+      <y>10</y>
+      <width>101</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>All LEDs off</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>479</x>
+      <y>356</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_67">
+       <property name="text">
+        <string>Tcp Server: </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelTCPServerStatus">
+       <property name="styleSheet">
+        <string notr="true">font: bold 8pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="text">
+        <string>Offline</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButtonSetDefault">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>10</y>
+      <width>101</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set as default</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonRunSeqSel">
+    <property name="geometry">
+     <rect>
+      <x>545</x>
+      <y>35</y>
+      <width>45</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Run sequence from selected step</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="tripod_lamp_gui.qrc">
+      <normaloff>:/Tripod_Lamp_GUI/Icons/control_end_blue.png</normaloff>:/Tripod_Lamp_GUI/Icons/control_end_blue.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonRunSeqBeg">
+    <property name="geometry">
+     <rect>
+      <x>489</x>
+      <y>35</y>
+      <width>45</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Run sequence from beginning</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="tripod_lamp_gui.qrc">
+      <normaloff>:/Tripod_Lamp_GUI/Icons/control_play_blue.png</normaloff>:/Tripod_Lamp_GUI/Icons/control_play_blue.png</iconset>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_68">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>35</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sequence Control:</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuProgram">
+    <property name="title">
+     <string>Program</string>
+    </property>
+    <addaction name="menuConnect"/>
+    <addaction name="menuToSystray"/>
+    <addaction name="separator"/>
+    <addaction name="menuLoadSequence"/>
+    <addaction name="menuSaveSequence"/>
+    <addaction name="separator"/>
+    <addaction name="menuExit"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="menuSerialPortSettings"/>
+    <addaction name="separator"/>
+    <addaction name="menuShowDebug"/>
+    <addaction name="menuBufferLoadout"/>
+   </widget>
+   <widget class="QMenu" name="menuNetwork">
+    <property name="title">
+     <string>Network</string>
+    </property>
+    <addaction name="menuStartTCPServer"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="menuAbout"/>
+   </widget>
+   <addaction name="menuProgram"/>
+   <addaction name="menuOptions"/>
+   <addaction name="menuNetwork"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="menuExit">
+   <property name="icon">
+    <iconset resource="tripod_lamp_gui.qrc">
+     <normaloff>:/Tripod_Lamp_GUI/Icons/door_out.png</normaloff>:/Tripod_Lamp_GUI/Icons/door_out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="menuSerialPortSettings">
+   <property name="icon">
+    <iconset resource="tripod_lamp_gui.qrc">
+     <normaloff>:/Tripod_Lamp_GUI/Icons/cog.png</normaloff>:/Tripod_Lamp_GUI/Icons/cog.png</iconset>
+   </property>
+   <property name="text">
+    <string>Serial Port Settings</string>
+   </property>
+  </action>
+  <action name="menuConnect">
+   <property name="icon">
+    <iconset resource="tripod_lamp_gui.qrc">
+     <normaloff>:/Tripod_Lamp_GUI/Icons/connect.png</normaloff>:/Tripod_Lamp_GUI/Icons/connect.png</iconset>
+   </property>
+   <property name="text">
+    <string>Connect</string>
+   </property>
+  </action>
+  <action name="menuShowDebug">
+   <property name="icon">
+    <iconset resource="tripod_lamp_gui.qrc">
+     <normaloff>:/Tripod_Lamp_GUI/Icons/application_xp_terminal.png</normaloff>:/Tripod_Lamp_GUI/Icons/application_xp_terminal.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open Debug Dialog</string>
+   </property>
+  </action>
+  <action name="menuStartTCPServer">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Toggle TCP Server</string>
+   </property>
+  </action>
+  <action name="menuUpdateNetworkConfs">
+   <property name="icon">
+    <iconset resource="tripod_lamp_gui.qrc">
+     <normaloff>:/Tripod_Lamp_GUI/Icons/refresh.png</normaloff>:/Tripod_Lamp_GUI/Icons/refresh.png</iconset>
+   </property>
+   <property name="text">
+    <string>Update configurations</string>
+   </property>
+  </action>
+  <action name="menuToSystray">
+   <property name="text">
+    <string>Move to systray</string>
+   </property>
+  </action>
+  <action name="menuLoadSequence">
+   <property name="text">
+    <string>Load Sequence</string>
+   </property>
+  </action>
+  <action name="menuSaveSequence">
+   <property name="text">
+    <string>Save Sequence</string>
+   </property>
+  </action>
+  <action name="menuBufferLoadout">
+   <property name="icon">
+    <iconset resource="tripod_lamp_gui.qrc">
+     <normaloff>:/Tripod_Lamp_GUI/Icons/chart_curve.png</normaloff>:/Tripod_Lamp_GUI/Icons/chart_curve.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show Out-Buffer Loadout</string>
+   </property>
+  </action>
+  <action name="menuAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="tripod_lamp_gui.qrc"/>
+ </resources>
+ <connections/>
+</ui>

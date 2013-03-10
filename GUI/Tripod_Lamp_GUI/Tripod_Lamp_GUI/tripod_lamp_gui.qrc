@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/Tripod_Lamp_GUI">
+        <file>Icons/connect.png</file>
+        <file>Icons/disconnect.png</file>
+        <file>Icons/cog.png</file>
+        <file>Icons/colorwheel.png</file>
+        <file>Icons/colorwheel_200.png</file>
+        <file>Icons/add.png</file>
+        <file>Icons/accept.png</file>
+        <file>Icons/arrow_down.png</file>
+        <file>Icons/arrow_up.png</file>
+        <file>Icons/cross.png</file>
+        <file>Icons/control_pause_blue.png</file>
+        <file>Icons/control_play_blue.png</file>
+        <file>Icons/control_stop_blue.png</file>
+        <file>Icons/control_start_blue.png</file>
+        <file>Icons/control_end_blue.png</file>
+        <file>Icons/application_xp_terminal.png</file>
+        <file>Icons/refresh.png</file>
+        <file>Icons/colorwheel_Icon.png</file>
+        <file>Icons/door_out.png</file>
+        <file>Icons/chart_curve.png</file>
+        <file>Icons/bin.png</file>
+        <file>Icons/colorwheel.ico</file>
+    </qresource>
+</RCC>

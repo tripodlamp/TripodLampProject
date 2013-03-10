@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Dateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Dateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Dateien">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Dateien">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generierte Dateien">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generierte Dateien\Debug">
+      <UniqueIdentifier>{48d44f53-e123-4ace-a951-21bdc2d02f83}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generierte Dateien\Release">
+      <UniqueIdentifier>{23358da9-4cb7-4761-9f76-dce4285f1422}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Header Dateien\Form">
+      <UniqueIdentifier>{0ed60301-e62f-48db-86c9-147981a0fcac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Dateien\Functions">
+      <UniqueIdentifier>{abea52f2-25b3-464b-a898-22a5e3810f2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Dateien\Widget">
+      <UniqueIdentifier>{2da2f8fd-3644-4118-b419-4de7f1a75c27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Dateien\Sequence">
+      <UniqueIdentifier>{53fac886-37ce-4e16-8712-a012b443a43e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Dateien\Defines">
+      <UniqueIdentifier>{c3f8e90b-6268-424a-9f6c-035a2a9483e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Dateien\Slots">
+      <UniqueIdentifier>{b18176b4-785f-49e0-8d31-d1db1775241a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Dateien\Form">
+      <UniqueIdentifier>{5a636836-f9ad-4b89-9c81-ec5e5e6d0799}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Dateien\Functions">
+      <UniqueIdentifier>{88ab30a7-5192-4ab8-9b5d-8d1e7d2c04fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Dateien\Sequence">
+      <UniqueIdentifier>{3e848f4b-33ba-4f1f-9fdf-a732cfb59d5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Dateien\Widget">
+      <UniqueIdentifier>{30c9a4b6-d77c-4d31-9dee-bcb92a0fb7e1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="tripod_lamp_gui.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_tripod_lamp_gui.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_tripod_lamp_gui.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_tripod_lamp_gui.cpp">
+      <Filter>Generierte Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CommandCall.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CommandCall.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CommandLine.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CommandLine.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ClickLabel.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ClickLabel.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_DebugPrint.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DebugPrint.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_RunSequence.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_RunSequence.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SerialPortSettings.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SerialPortSettings.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="SerialPortSettings.cpp">
+      <Filter>Source Dateien\Form</Filter>
+    </ClCompile>
+    <ClCompile Include="RunSequence.cpp">
+      <Filter>Source Dateien\Form</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugPrint.cpp">
+      <Filter>Source Dateien\Form</Filter>
+    </ClCompile>
+    <ClCompile Include="LEDState.cpp">
+      <Filter>Source Dateien\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandLine.cpp">
+      <Filter>Source Dateien\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandCall.cpp">
+      <Filter>Source Dateien\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="ClickLabel.cpp">
+      <Filter>Source Dateien\Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceStep.cpp">
+      <Filter>Source Dateien\Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomGenerator.cpp">
+      <Filter>Source Dateien\Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="LedSide.cpp">
+      <Filter>Source Dateien\Sequence</Filter>
+    </ClCompile>
+    <ClCompile Include="UartControl.cpp">
+      <Filter>Source Dateien\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="sio.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="LEDSlotsSpecificLED.cpp">
+      <Filter>Source Dateien\Slots</Filter>
+    </ClCompile>
+    <ClCompile Include="LEDSlotsSequence.cpp">
+      <Filter>Source Dateien\Slots</Filter>
+    </ClCompile>
+    <ClCompile Include="LEDSlotsGeneral.cpp">
+      <Filter>Source Dateien\Slots</Filter>
+    </ClCompile>
+    <ClCompile Include="LEDSlotsColor.cpp">
+      <Filter>Source Dateien\Slots</Filter>
+    </ClCompile>
+    <ClCompile Include="GUISlotsGeneral.cpp">
+      <Filter>Source Dateien\Slots</Filter>
+    </ClCompile>
+    <ClCompile Include="GUISlotsDebug.cpp">
+      <Filter>Source Dateien\Slots</Filter>
+    </ClCompile>
+    <ClCompile Include="TcpServer.cpp">
+      <Filter>Source Dateien\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_TcpServer.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_TcpServer.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketChat.cpp">
+      <Filter>Source Dateien\Form</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SocketChat.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SocketChat.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="LEDSlotsTCP.cpp">
+      <Filter>Source Dateien\Slots</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandGen.cpp">
+      <Filter>Source Dateien\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CommandGen.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CommandGen.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceTable.cpp">
+      <Filter>Source Dateien\Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SequenceTable.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SequenceTable.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GUISlotsSequenceTable.cpp">
+      <Filter>Source Dateien\Slots</Filter>
+    </ClCompile>
+    <ClCompile Include="BufferLoadout.cpp">
+      <Filter>Source Dateien\Form</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_BufferLoadout.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_BufferLoadout.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GUISlotsBufferLoadout.cpp">
+      <Filter>Source Dateien\Slots</Filter>
+    </ClCompile>
+    <ClCompile Include="GUISlotsPresets.cpp">
+      <Filter>Source Dateien\Slots</Filter>
+    </ClCompile>
+    <ClCompile Include="PresetComboBox.cpp">
+      <Filter>Source Dateien\Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PresetComboBox.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PresetComboBox.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Preset.cpp">
+      <Filter>Source Dateien\Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpAbout.cpp">
+      <Filter>Source Dateien\Form</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_HelpAbout.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_HelpAbout.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="tripod_lamp_gui.h">
+      <Filter>Header Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tripod_lamp_gui.ui">
+      <Filter>Form Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tripod_lamp_gui.qrc">
+      <Filter>Resource Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FormDebugPrint.ui">
+      <Filter>Form Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FormRunSequence.ui">
+      <Filter>Form Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FormSerialPortSettings.ui">
+      <Filter>Form Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CommandCall.h">
+      <Filter>Header Dateien\Functions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CommandLine.h">
+      <Filter>Header Dateien\Functions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ClickLabel.h">
+      <Filter>Header Dateien\Widget</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DebugPrint.h">
+      <Filter>Header Dateien\Form</Filter>
+    </CustomBuild>
+    <CustomBuild Include="RunSequence.h">
+      <Filter>Header Dateien\Form</Filter>
+    </CustomBuild>
+    <CustomBuild Include="SerialPortSettings.h">
+      <Filter>Header Dateien\Form</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TcpServer.h">
+      <Filter>Header Dateien\Functions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FormSocketChat.ui">
+      <Filter>Form Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="SocketChat.h">
+      <Filter>Header Dateien\Form</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CommandGen.h">
+      <Filter>Header Dateien\Functions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="SequenceTable.h">
+      <Filter>Header Dateien\Widget</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FormBufferLoadout.ui">
+      <Filter>Form Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="BufferLoadout.h">
+      <Filter>Header Dateien\Form</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PresetComboBox.h">
+      <Filter>Header Dateien\Widget</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FormAbout.ui">
+      <Filter>Form Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="HelpAbout.h">
+      <Filter>Header Dateien\Form</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_tripod_lamp_gui.h">
+      <Filter>Generierte Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_FormDebugPrint.h">
+      <Filter>Generierte Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_FormRunSequence.h">
+      <Filter>Generierte Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_FormSerialPortSettings.h">
+      <Filter>Generierte Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="sio.h">
+      <Filter>Header Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="UartControl.h">
+      <Filter>Header Dateien\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="LedSide.h">
+      <Filter>Header Dateien\Sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomGenerator.h">
+      <Filter>Header Dateien\Sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="SequenceStep.h">
+      <Filter>Header Dateien\Sequence</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandDefs.h">
+      <Filter>Header Dateien\Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="Led.h">
+      <Filter>Header Dateien\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="LEDState.h">
+      <Filter>Header Dateien\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_FormSocketChat.h">
+      <Filter>Generierte Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_FormBufferLoadout.h">
+      <Filter>Generierte Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Preset.h">
+      <Filter>Header Dateien\Widget</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_FormAbout.h">
+      <Filter>Generierte Dateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
