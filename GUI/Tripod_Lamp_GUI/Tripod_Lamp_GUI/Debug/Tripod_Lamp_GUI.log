@@ -1,5 +1,20 @@
-﻿Build started 3/10/2013 9:40:20 PM.
+﻿Build started 3/10/2013 9:58:49 PM.
+     1>Project "Z:\Programming\Git\TripodLampProject\GUI\Tripod_Lamp_GUI\Tripod_Lamp_GUI\Tripod_Lamp_GUI.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Tripod_Lamp_GUI.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         All outputs are up-to-date.
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         Tripod_Lamp_GUI.vcxproj -> Z:\Programming\Git\TripodLampProject\GUI\Tripod_Lamp_GUI\Win32\Debug\Tripod_Lamp_GUI.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\Tripod_Lamp_GUI.unsuccessfulbuild".
+         Touching "Debug\Tripod_Lamp_GUI.lastbuildstate".
+     1>Done Building Project "Z:\Programming\Git\TripodLampProject\GUI\Tripod_Lamp_GUI\Tripod_Lamp_GUI\Tripod_Lamp_GUI.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.02
+Time Elapsed 00:00:02.18

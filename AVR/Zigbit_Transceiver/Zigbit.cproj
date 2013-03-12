@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>5.1</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8</ToolchainName>
+    <ProjectGuid>{658a7d01-e121-497a-9e82-30f8e77b3057}</ProjectGuid>
+    <avrdevice>ATmega1281</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>uracoli_test</AssemblyName>
+    <Name>Zigbit</Name>
+    <RootNamespace>uracoli_test</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <AsfVersion>2.11.1</AsfVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>None</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>m</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-g2)</avrgcc.assembler.debugging.DebugLevel>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>m</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="inc\at86rf212.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\at86rf230a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\at86rf230b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\at86rf231.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\at86rf232.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\at86rf233.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\atmega_rfa1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\board.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\boards\board_zgbta2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\board_cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\const.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\hif.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\hif_uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\hif_usb.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\ioutil.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\p2p.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\p2p_protocol.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\radio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\timer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="inc\transceiver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libioutil\hif_at90usb.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libioutil\hif_dump.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libioutil\hif_ft245.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libioutil\hif_print.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libioutil\hif_uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libioutil\lin_buffer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libioutil\stream_io.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libioutil\timer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libioutil\timer_tstamp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libradio\radio_rf230.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libradio\radio_rfa.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libradio\trx_datarate.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libradio\trx_datarate_str.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libradio\trx_rf230.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libradio\trx_rf230_bitrd.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libradio\trx_rf230_bitwr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libradio\trx_rf230_crc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libradio\trx_rf230_frame.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libradio\trx_rf230_irq.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libradio\trx_rf230_misc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libradio\trx_rf230_param.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libradio\trx_rf230_sram.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libradio\trx_rfa.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libradio\usr_radio_error.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libradio\usr_radio_irq.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libradio\usr_radio_receive_frame.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libradio\usr_radio_tx_done.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="wuart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="wuart.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="inc\boards" />
+    <Folder Include="libioutil" />
+    <Folder Include="libradio" />
+    <Folder Include="inc" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
